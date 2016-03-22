@@ -1,0 +1,16 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="CalendarExample.controller.EventList"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="{/dateString}" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<List items="{/events}" noDataText="No events found">
+				<StandardListItem title="{title}" description="{message}" type="Navigation" press="onListItemPress"/>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Button text="Create" icon="sap-icon://create-entry-time" press="onCreateEvent"/>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

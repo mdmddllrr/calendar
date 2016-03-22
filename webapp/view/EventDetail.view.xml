@@ -1,0 +1,42 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" controllerName="CalendarExample.controller.EventDetail"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Event Details" showNavButton="true" navButtonPress="onNavBack">
+				 <content>
+                    <f:SimpleForm
+                        maxContainerCols="2"
+                        layout="ResponsiveGridLayout"
+                        labelSpanL="2" labelSpanM="2"
+                        emptySpanL="1" emptySpanM="1"
+                        columnsL="1" columnsM="1">
+                        <f:content>
+                            <Label text="Title" />
+                            <Input placeholder="Title" editable="{/details/editable}" value="{/details/title}"></Input>
+                            <Label text="Date" />
+                            <DateTimeInput id="inputDate" type="Date" placeholder="Date" 
+                                valueFormat="yyyy-MM-dd" editable="{/details/editable}" value="{/details/dateString}"/>
+                            <Label text="Start Time" />
+                            <DateTimeInput id="inputStart" type="Time" placeholder="Start Time"
+                                valueFormat="HH:mm" editable="{/details/editable}" dateValue="{/details/startTime}"/>
+                            <Label text="End Time" />
+                            <DateTimeInput id="inputEnd" type="Time" placeholder="End Time"
+                                valueFormat="HH:mm" editable="{/details/editable}" dateValue="{/details/endTime}"/>
+                            <Label text="Location" />
+                            <Input placeholder="Location" editable="{/details/editable}" value="{/details/location}"></Input>
+                            <Label text="Notes" />
+                            <TextArea width="100%" rows="8" editable="{/details/editable}" value="{/details/notes}"/>
+                        </f:content>
+                    </f:SimpleForm>
+
+                </content>
+                <footer><Toolbar>
+                    
+                    <ToolbarSpacer/>
+                    <Button text="Delete" visible="{/details/deletable}" icon="sap-icon://delete" press="onDeleteEvent"/>
+                    <Button text="Save" visible="{/details/editable}" icon="sap-icon://save" press="onSaveEvent"/>
+                </Toolbar></footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

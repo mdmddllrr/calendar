@@ -1,0 +1,25 @@
+<mvc:View controllerName="CalendarExample.controller.CalendarHome" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:u="sap.ui.unified">
+	<App id="app">
+		<pages>
+			<Page id="pageCalendar" title="Calendar Example"  backgroundDesign="Solid">
+				<content>
+					<FlexBox height="100%" alignItems="Center" justifyContent="Center">
+						<items>
+							<u:Calendar id="cal1" specialDates="{/marks}" select="onCalSelect">
+								<u:specialDates>
+									<u:DateTypeRange type="Type01" startDate="{startDate}"/>
+								</u:specialDates>
+							</u:Calendar>
+						</items>
+					</FlexBox>
+				</content>
+				<footer>
+					<Toolbar>
+						<Button  icon="sap-icon://refresh" press="onRefresh"/>
+					</Toolbar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
