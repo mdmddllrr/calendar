@@ -1,0 +1,38 @@
+{
+  "run": [
+    {
+      "filePath": "/webapp/index.html",
+      "previewMode": 0,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [],
+      "_metadata": {
+        "id": 8009451,
+        "runnerId": "webapprunner",
+        "displayName": "Run index.html"
+      }
+    }
+  ],
+  "hybrid": {
+    "fcContainerId": "",
+    "fcPackageId": "",
+    "cordovaContainerId": "d295166e0289d520f820cfa0fc59b4d3",
+    "cordovaPackageId": "1e5a01aa05831b479d99d731d83741ce",
+    "dirty": true,
+    "configSaved": false,
+    "commonError": "",
+    "results": {
+      "ios": {
+        "requested": true,
+        "appId": "3ce886f756e26a77eae5e1bad0904eee",
+        "error": ""
+      },
+      "android": {}
+    }
+  }
+}
